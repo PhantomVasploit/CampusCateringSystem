@@ -11,7 +11,7 @@ public class Order implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String orderNumber;
 	private String foodItemName;
-	private String amountOrdered;
+	private int amountOrdered; //changed field type to int
 	private String cost;
 	private LocalDateTime dateAndTime = LocalDateTime.now();;
 	
@@ -20,16 +20,16 @@ public class Order implements Serializable {
 	{
 		this.orderNumber = "";
 		this.foodItemName = "";
-		this.amountOrdered = "";
+		this.amountOrdered = 0;
 		this.cost = "";
 		this.dateAndTime = null;
 	}
-	public Order(String foodItemName, String amountOrdered, String cost)
+	public Order(String foodItemName, int amountOrdered, String cost)
 	{
 		this.orderNumber = foodItemName.concat("-").concat(dateAndTime.toString());
 		this.foodItemName = foodItemName;
 		this.amountOrdered = amountOrdered;
-		int totalCost = Integer.parseInt(cost) * Integer.parseInt(amountOrdered) ;
+		int totalCost = Integer.parseInt(cost) * amountOrdered ;
 		this.cost = totalCost + "";
 	}
 	
@@ -46,7 +46,7 @@ public class Order implements Serializable {
 	{
 		this.cost = cost;
 	}
-	public void setAmountOrdered(String amountOrdered)
+	public void setAmountOrdered(int amountOrdered)
 	{
 		this.amountOrdered = amountOrdered;
 	}
@@ -68,7 +68,7 @@ public class Order implements Serializable {
 	{
 		return cost;
 	}
-	public String getAmountOrdered()
+	public int getAmountOrdered()
 	{
 		return amountOrdered;
 	}
