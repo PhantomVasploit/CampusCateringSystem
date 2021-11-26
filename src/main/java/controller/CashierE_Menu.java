@@ -68,6 +68,6 @@ public class CashierE_Menu extends HttpServlet{
 			order = new Order(foodItemOrdered, amountOrdered, staffPrice);
 		}
 		req.setAttribute("order", order);
-		res.sendRedirect("cart");
+		res.sendRedirect("/cart");
 	}
 }

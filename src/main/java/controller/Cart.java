@@ -28,6 +28,9 @@ public class Cart extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
 		// set request attribute storing the confirmed orders
+		Order order = (Order) req.getAttribute("order");
 		res.sendRedirect("/orders");
+		req.setAttribute("cartOrders", order);
+		
 	}
 }
