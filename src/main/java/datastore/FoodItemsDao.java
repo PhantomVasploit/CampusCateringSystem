@@ -26,11 +26,13 @@ public class FoodItemsDao {
 			{
 				FoodItem foodItems = new FoodItem(rs.getString("item_name"), rs.getString("item_code"), rs.getString("staff_cafeteria_price"), rs.getString("student_cafeteria_price"));
 				data.add(foodItems);
-			}
+							}
+			
 		}catch(SQLException e)
 		{
 			e.printStackTrace();
 		}
+		
 		return data;
 	}
 	public int createEMenu(E_Menu e_menu) throws SQLException
@@ -74,6 +76,7 @@ public class FoodItemsDao {
 		{
 			e.printStackTrace();
 		}
+		System.out.println("Data from FoodItemsDao getMenu()"+data);
 		return data;
 	}
 }

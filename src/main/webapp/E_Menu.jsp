@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 </head>
 <body>	
+<h1>E_Menu.jsp</h1>
 	<div class="container">
 		<div class="row">
 			<div class="list-group mt-4">

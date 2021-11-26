@@ -37,7 +37,9 @@ public class E_MenuHandler extends HttpServlet {
 				{
 					todayMenu.add(item);
 				}
-			}
+			}System.out.println("getFoodItems() called");
+			System.out.println("Data from E_MenuHandler"+todayMenu);
+			
 			req.setAttribute("data", todayMenu);
 			RequestDispatcher rd = req.getRequestDispatcher("E_Menu.jsp");
 			rd.forward(req, res);
