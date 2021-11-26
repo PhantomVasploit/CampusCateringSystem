@@ -54,7 +54,7 @@ public class CashierE_Menu extends HttpServlet{
 	{
 		Order order = null;
 		String foodItemOrdered = req.getParameter("foodItem");
-		String amountOrdered = req.getParameter("amountOrdered");
+		int amountOrdered = Integer.parseInt(req.getParameter("amountOrdered"));
 		String staffPrice = req.getParameter("staffPrice");
 		String studentPrice = req.getParameter("studentPrice");
 		
